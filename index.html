@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="config.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <img class="main__search-box--img" src="images/background-mountain.jpg">
+        <div class="main__search-box--container">
+            <form class="main__search-box--form">
+                <input id="input-box" class="main__search-box--input" type="text" autofocus>
+                <button id="search-button" class="main__search-box--button" type="submit">Search</button>
+            </form>
+            <div class="main__weather-results-box">
+                <img id="main__weather-results-icon">
+                <p id="main__weather-results-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="weather.js" async defer></script>
+</body>
+
+</html>
