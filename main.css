@@ -1,15 +1,42 @@
+body{
+    margin: 0;
+    font-family: 'Rubik';
+    font-size: 22px;
+}
 
+p{
+    margin: 0;
+}
 .main__search-box--img{
     /* background-image: url(images/background-mountain.jpg); */
-    filter: brightness(0.6);
     /* background-repeat: no-repeat;
     background-size: cover;
     background-position: center; */
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-
 }
+
+.main__search-box--img__night{
+    animation: decrease-brightness;
+    animation-duration: 4s;
+    filter: brightness(0.3);
+}
+
+.main__search-box--img__day{
+    animation: increase-brightness;
+    animation-duration: 4s;
+    filter: brightness(1.3);
+}
+
+@keyframes increase-brightness {
+    from {filter: brightness(0.3);}
+    to {filter: brightness(1.3);}
+  }
+@keyframes decrease-brightness {
+    from {filter: brightness(0.9);}
+    to {filter: brightness(0.3);}
+  }
 
 .main__search-box--container{
     width: 700px;
@@ -53,7 +80,7 @@
 
 #main__weather-output{
     height: 200px;
-    border: solid red 2px;
+    /* border: solid red 2px; */
     position: absolute;
     width: 100%;
     display: block;
@@ -61,13 +88,17 @@
 }
 
 .main__weather-results-box{
-    margin: 20px auto;
-    display: block;
+    margin: 20px auto 0 auto;
     border: yellow solid 2px;
     width: fit-content;
+    height: 1px;
     display: flex;
     align-items: center;
-
+    /* position: absolute;
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; */
 }
 
 #main__weather-results-icon{
@@ -76,14 +107,21 @@
     right: 0; */
     z-index: 5;
     width: 200px;
-    height: 200px;
+    /* height: 200px; */
 }
 
 #main__weather-results-text{
     /* display: inline; */
     margin: auto;
     margin-left: 20px;
-    vertical-align: middle;
-    font-size: 64px;
+    /* vertical-align: middle; */
+    font-size: 4rem;
     color: white;
+}
+
+.main__time-results-box{
+    color: white;
+    font-size: 2rem;
+    margin: 20px 0 ;
+    text-align: center;
 }
