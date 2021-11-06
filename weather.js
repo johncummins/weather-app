@@ -97,15 +97,20 @@ function getNightDay(sunrise, sunset, timezone) {
 
 function getTimeTill(sunrise, sunset, isNightime) {
 
-    let timeString = "";
+    var timeString = "";
+
     // sunrise is in the Future
     const tDiffMilRiseFut = sunrise - currentTime;
+    console.log("tDiffMilRiseFut", tDiffMilRiseFut)
     // sunrise was in the past
     const tDiffMilRisePast = currentTime - sunrise;
+    console.log("tDiffMilRisePast", tDiffMilRisePast)
     // sunset is in the future
     const tDiffMilSetFut = sunset - currentTime;
+    console.log("tDiffMilSetFut", tDiffMilSetFut)
     // sunset was in the past
     const tDiffMilSetPast = currentTime - sunset;
+    console.log("tDiffMilSetFut", tDiffMilSetFut)
 
     if (isNightime === true) {
         // show sunrise
