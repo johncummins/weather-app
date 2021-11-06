@@ -145,7 +145,11 @@ p{
         width: 100px;
     }
     #main__weather-results-text{
+        margin-left: 0;
         font-size: 3rem;
+    }
+    .main__time-results-box{
+        margin-top: -30px;
     }
 
     #main__time-results{
